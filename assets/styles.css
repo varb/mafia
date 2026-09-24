@@ -38,17 +38,20 @@ a:hover { color: #ffaaa5; }
 
 .hero { padding: 30px 0 34px; }
 
-.mark {
+.hero-heading {
   display: grid;
-  place-items: center;
-  width: 62px;
-  height: 62px;
-  margin-bottom: 28px;
-  border: 1px solid #773033;
-  border-radius: 18px;
-  background: linear-gradient(145deg, #ef4c45, #861e28);
-  box-shadow: 0 16px 45px rgba(174, 34, 40, .25);
-  font: 800 30px/1 Georgia, serif;
+  grid-template-columns: minmax(0, 1fr) clamp(116px, 19vw, 164px);
+  gap: clamp(22px, 5vw, 48px);
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.app-icon {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 23%;
+  box-shadow: 0 20px 60px rgba(174, 34, 40, .3);
 }
 
 .eyebrow {
@@ -147,15 +150,18 @@ h1 {
 
 footer {
   padding-top: 20px;
-  border-top: 1px solid var(--border);
   color: #8f7e82;
   font-size: 13px;
   text-align: center;
 }
 
+.home-footer { border-top: 1px solid var(--border); }
+
 @media (max-width: 560px) {
   .shell { width: min(calc(100% - 28px), var(--max)); padding-top: 36px; }
   .document { padding: 24px 20px; border-radius: 20px; }
+  .hero-heading { grid-template-columns: minmax(0, 1fr) 88px; gap: 16px; }
+  .hero-heading h1 { font-size: clamp(32px, 10vw, 42px); }
   .card { grid-template-columns: 40px 1fr auto; padding: 17px 15px; gap: 12px; }
   .card-icon { width: 40px; height: 40px; }
 }

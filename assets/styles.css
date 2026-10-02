@@ -165,3 +165,24 @@ footer {
   .card { grid-template-columns: 40px 1fr auto; padding: 17px 15px; gap: 12px; }
   .card-icon { width: 40px; height: 40px; }
 }
+
+.language-switch {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.language-switch a {
+  padding: 5px 9px;
+  border-radius: 8px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.language-switch a:hover,
+.language-switch a[aria-current="page"] {
+  background: var(--accent-soft);
+  color: var(--text);
+}
